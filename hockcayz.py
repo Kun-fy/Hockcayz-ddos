@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+import os
+import sys
+import time
 import socket
 from time import sleep
 from threading import Thread, active_count
@@ -8,16 +11,8 @@ import string
 import signal
 import ssl
 import argparse
-import sys
 
 example_text = ''' \nTips: Target page with 1500+ bytes size.
-
-example:
-  python %s example.com/test.php -p 80 -http
-  python %s example.com/hello/ -p 443 -ssl -http
-  python %s example.com -p 80 -http 
-  python %s example.com -p 21 -payload 68656c6c6f
-  python %s example.com -p 22
 
 Connects - TCP handshakes towards victim
 Payloads - Recevied payloads by victim
