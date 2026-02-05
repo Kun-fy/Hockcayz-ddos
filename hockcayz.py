@@ -22,7 +22,7 @@ print("""
   ┌───┐│││   ││
   ││   │││╰──╯│
   ╰╯   ╰╯╰────╯
-
+\033[0m
 """)
 
 example_text = ''' \nTips: Target page with 1500+ bytes size.
