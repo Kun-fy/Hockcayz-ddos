@@ -12,8 +12,6 @@ import signal
 import ssl
 import argparse
 
-example_text = ''' \nTips: Target page with 1500+ bytes size.
-
 Connects - TCP handshakes towards victim
 Payloads - Recevied payloads by victim
 Dropped  - TCP handshakes or payloads rejected by victim (site down)
