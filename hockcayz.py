@@ -19,15 +19,8 @@ from time import sleep
 
 
 def show_banner():
-    print(Fore.RED + Back.BLACK + r'''
--__ /\\         -_____    -_____          _-___
-  ||  \\          ' | -,    ' | -,            /
- /||__|| '\\/\\  /| |  |`  /| |  |`  /'\\    /
- \||__||  || ;'  || |==||  || |==|| || ||  =/=
-  ||  |,  ||/   ~|| |  |, ~|| |  |, || ||  /
-_-||-_/   |/     ~-____,   ~-____,  \\,/  /-__-
-  ||     (      (         (
-          -_-
+    print(Fore.YELLOW + Back.WHITE + r'''
+
 ''')
 
 
@@ -162,7 +155,7 @@ def send_request():
 def arg_parsing():
 
     parser = argparse.ArgumentParser(
-        description='PyDDoZ Argument Parser v1.0.0')
+        description='Hokcayz Argument Parser v1.0.0')
     parser.add_argument('-u', help='URL', required=True, type=str)
     parser.add_argument(
         '-m',
@@ -293,14 +286,14 @@ if __name__ == '__main__':
                         t.start()
                         sleep(sleep_time)
                         elapsed_time = time.time() - start_time
-                        print(Fore.BLUE + 'Responded Requests: {0} - Nuked Requests: {1} - Bot Requests: {2} - Elapsed Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
+                        print(Fore.BLUE + 'Respon Req: {0} - Nuked Req: {1} - Bot Req: {2} - Elapsed Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
 
                     main_thread = threading.currentThread()
                     for i in threading.enumerate():
                         if i is main_thread:
                             continue
                         else:
-                            print(Fore.BLUE + 'Responded Requests: {0} - Nuked Requests: {1} - Bot Requests: {2} - Elapsed Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
+                            print(Fore.GREEN + 'Respon Req: {0} - Nuked Req: {1} - Bot Req: {2} - Elapsed Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
                             i.join()
 
                 except KeyboardInterrupt:
@@ -670,14 +663,14 @@ if __name__ == '__main__':
                 t.start()
                 sleep(sleep_time)
                 elapsed_time = time.time() - start_time
-                print(Fore.BLUE + 'Responded Requests: {0} - Nuked Requests: {1} - Bot Requests: {2} - Elapsed Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
+                print(Fore.BLUE + 'Respon Req: {0} - Nuked Req: {1} - Bot Req: {2} - Elapsed Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
 
             main_thread = threading.currentThread()
             for i in threading.enumerate():
                 if i is main_thread:
                     continue
                 else:
-                    print(Fore.BLUE + 'Responded Requests: {0} - Nuked Requests: {1} - Bot Requests: {2} - Elapsed Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
+                    print(Fore.BLUE + 'Respon Req: {0} - Nuked Req: {1} - Bot Req: {2} - Elapsed Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
                     i.join()
 
         except KeyboardInterrupt:
@@ -693,7 +686,7 @@ if __name__ == '__main__':
                     i.join()
 
             logging.info(
-                'Responded Requests: {0} - Nuked Requests: {1} - Bot Requests: {2} - Elapsed Time: {3} seconds.'.format(
+                'Respon Req: {0} - Nuked Req: {1} - Bot Req: {2} - Elapsed Time: {3} seconds.'.format(
                     str(num_success),
                     str(num_failed),
                     str(num_bot_requests),
