@@ -5,7 +5,7 @@ import time
 import socket
 from time import sleep
 from threading import Thread, active_count
-from os import system, geteuid
+from os import system, id -u
 import random
 import string
 import signal
@@ -84,8 +84,8 @@ except:
     sys.exit()
 
 
-# Check if script is running as root
-if geteuid() != 0:
+# Check if script is running 
+if id -u() != 0:
     print("Run %s as root." % sys.argv[0])
     sys.exit()
 
