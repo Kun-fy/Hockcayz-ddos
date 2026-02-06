@@ -295,14 +295,14 @@ if __name__ == '__main__':
                         t.start()
                         sleep(sleep_time)
                         elapsed_time = time.time() - start_time
-                        print(Fore.BLUE + 'Respon Requests: {0} - 'Fore.WHITE + 'Nuked Requests: {1} - 'Fore.CYAN + 'Bot Requests: {2} - 'Fore.YELLOW + 'Time: {3} seconds.'''''''.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True'')
+                        print(Fore.BLUE + 'Respon Requests: {0} - \033[33m Nuked Requests: {1} - \033[31mBot Requests: {2} - \033[34mTime: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
 
                     main_thread = threading.currentThread()
                     for i in threading.enumerate():
                         if i is main_thread:
                             continue
                         else:
-                            print(Fore.BLUE + 'Respon Requests: {0} - 'Fore.WHITE + 'Nuked Requests: {1} - 'Fore.CYAN + 'Bot Requests: {2} - 'Fore.YELLOW + 'Time: {3} seconds.'''''''.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True'')
+                            print(Fore.BLUE + 'Respon Requests: {0} - \033[33m Nuked Requests: {1} - \033[31mBot Requests: {2} - \033[34mTime: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
                             i.join()
 
                 except KeyboardInterrupt:
@@ -318,7 +318,7 @@ if __name__ == '__main__':
                             i.join()
 
                     logging.info(
-                        'Respon Requests: {0} - Nuked Requests: {1} - Bot Requests: {2} - Elapsed Time: {3} seconds.'.format(
+                        'Respon Requests: {0} - \033[33mNuked Requests: {1} - \033[32mBot Requests: {2} - \033[37mElapsed Time: {3} seconds.'.format(
                             str(num_success),
                             str(num_failed),
                             str(num_bot_requests),
@@ -678,7 +678,7 @@ if __name__ == '__main__':
                 if i is main_thread:
                     continue
                 else:
-                    print(Fore.BLUE + 'Respon Requests: {0} - 'Fore.WHITE + 'Nuked Requests: {1} - 'Fore.CYAN + 'Bot Requests: {2} - 'Fore.YELLOW + 'Time: {3} seconds.'''''''.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
+                    print(Fore.BLUE + 'Respon Requests: {0} - \033[32mNuked Requests: {1} - \033[37mBot Requests: {2} - \033[32mTime: {3} seconds.'''''''.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
                     i.join()
 
         except KeyboardInterrupt:
