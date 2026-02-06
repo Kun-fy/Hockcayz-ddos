@@ -309,7 +309,7 @@ if __name__ == '__main__':
                             i.join()
 
                     logging.info(
-                        'Respon Req: {0} - 'Fore.WHITE + 'Nuked Req: {1} - 'Fore.CYAN +' Bot: {2} - 'Fore.YELLOW +' Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
+                        'Respon Req: {0} - 'Fore.WHITE + 'Nuked Req: {1} - 'Fore.CYAN + 'Bot: {2} - 'Fore.YELLOW + 'Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
                             str(num_success),
                             str(num_failed),
                             str(num_bot_requests),
