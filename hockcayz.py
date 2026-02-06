@@ -87,7 +87,7 @@ except:
 
 tdm # This is the module object
 tqdm(...) # This calls the function
-    print("Run %s asyn." % sys.argv[0])
+    print("Run %s " % sys.argv[0])
     sys.exit()
 
 
