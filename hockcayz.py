@@ -3,7 +3,7 @@
 import argparse
 import logging
 import json
-import proxify
+import proxify3
 import requests
 import random
 import resource
