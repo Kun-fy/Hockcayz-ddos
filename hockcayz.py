@@ -295,14 +295,14 @@ if __name__ == '__main__':
                         t.start()
                         sleep(sleep_time)
                         elapsed_time = time.time() - start_time
-                        print(Fore.BLUE + 'Respon Requests: {0} - \033[33m Nuked Requests: {1} - \033[31mBot Requests: {2} - \033[34mTime: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
+                        print(Fore.YELLOW + 'Respon Requests: {0} - \033[32m Nuked Requests: {1} - \033[38;5;111mBot Requests: {2} - \033[38;5;206mTime: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
 
                     main_thread = threading.currentThread()
                     for i in threading.enumerate():
                         if i is main_thread:
                             continue
                         else:
-                            print(Fore.BLUE + 'Respon Requests: {0} - \033[33m Nuked Requests: {1} - \033[31mBot Requests: {2} - \033[34mTime: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
+                            print(Fore.BLUE + 'Respon Requests: {0} - \033[38;5;206mNuked Requests: {1} - \033[31mBot Requests: {2} - \033[34mTime: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
                             i.join()
 
                 except KeyboardInterrupt:
@@ -537,13 +537,13 @@ if __name__ == '__main__':
 
     while (True):
         try:
-            num_threads = int(input(Fore.GREEN + 'Enter number of threads: '))
+            num_threads = int(input(Fore.GREEN + '╰─> number of threads: '))
 
             if (not isinstance(num_threads, int)
                     or not (1 <= num_threads <= 1024)):
                 print(
                     Fore.RED +
-                    'Enter valid number of threads between 1 and 1024!')
+                    '╰─> Enter valid number of threads between 1 and 1024!')
                 continue
 
             else:
@@ -581,7 +581,7 @@ if __name__ == '__main__':
             continue
 
     logging.info(
-        'Sleep time between threads: ' +
+        '╰─> Sleep time between threads: ' +
         str(sleep_time) +
         ' seconds.')
 
@@ -619,7 +619,7 @@ if __name__ == '__main__':
                     'Do you want to use proxy? [Y/N]: ')[0].lower())
 
             if (use_proxy not in 'yn'):
-                print(Fore.RED + 'Enter Y or N!')
+                print(Fore.BLUE + 'Enter Y or N!')
                 continue
 
             else:
