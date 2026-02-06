@@ -3,7 +3,7 @@
 import argparse
 import logging
 import json
-import proxify3
+import proxify
 import requests
 import random
 import resource
@@ -19,8 +19,15 @@ from time import sleep
 
 
 def show_banner():
-    print(Fore.YELLOW + Back.BLACK + r'''
-
+    print(Fore.RED + Back.BLACK + r'''
+-__ /\\         -_____    -_____          _-___
+  ||  \\          ' | -,    ' | -,            /
+ /||__|| '\\/\\  /| |  |`  /| |  |`  /'\\    /
+ \||__||  || ;'  || |==||  || |==|| || ||  =/=
+  ||  |,  ||/   ~|| |  |, ~|| |  |, || ||  /
+_-||-_/   |/     ~-____,   ~-____,  \\,/  /-__-
+  ||     (      (         (
+          -_-
 ''')
 
 
@@ -155,7 +162,7 @@ def send_request():
 def arg_parsing():
 
     parser = argparse.ArgumentParser(
-        description='Hokcayz Argument Parser v1.0.0')
+        description='PyDDoZ Argument Parser v1.0.0')
     parser.add_argument('-u', help='URL', required=True, type=str)
     parser.add_argument(
         '-m',
@@ -218,8 +225,9 @@ def arg_parsing():
 
 if __name__ == '__main__':
     urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+    resource.setrlimit(resource.RLIMIT_NOFILE, (999999, 999999))
     logging.basicConfig(
-        filename='hokcayz.log',
+        filename='pyddoz.log',
         format='%(asctime)s | %(levelname)s | %(message)s',
         datefmt='%m/%d/%Y %I:%M:%S %p',
         filemode='w',
@@ -286,14 +294,14 @@ if __name__ == '__main__':
                         t.start()
                         sleep(sleep_time)
                         elapsed_time = time.time() - start_time
-                        print(Fore.BLUE + 'Respon Req: {0} - 'Fore.WHITE + 'Nuked Req: {1} - 'Fore.CYAN +' Bot: {2} - 'Fore.YELLOW +' Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
+                        print(Fore.BLUE + 'Responded Requests: {0} - Nuked Requests: {1} - Bot Requests: {2} - Elapsed Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
 
                     main_thread = threading.currentThread()
                     for i in threading.enumerate():
                         if i is main_thread:
                             continue
                         else:
-                            print(Fore.BLUE + 'Respon Req: {0} - 'Fore.WHITE + 'Nuked Req: {1} - 'Fore.CYAN +' Bot: {2} - 'Fore.YELLOW +' Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
+                            print(Fore.BLUE + 'Responded Requests: {0} - Nuked Requests: {1} - Bot Requests: {2} - Elapsed Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
                             i.join()
 
                 except KeyboardInterrupt:
@@ -663,14 +671,14 @@ if __name__ == '__main__':
                 t.start()
                 sleep(sleep_time)
                 elapsed_time = time.time() - start_time
-                print(Fore.BLUE + 'Respon Req: {0} - 'Fore.WHITE + 'Nuked Req: {1} - 'Fore.CYAN + 'Bot: {2} - 'Fore.YELLOW + 'Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
-                
+                print(Fore.BLUE + 'Responded Requests: {0} - Nuked Requests: {1} - Bot Requests: {2} - Elapsed Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
+
             main_thread = threading.currentThread()
             for i in threading.enumerate():
                 if i is main_thread:
                     continue
                 else:
-                    print(Fore.BLUE + 'Respon Req: {0} - 'Fore.WHITE + 'Nuked Req: {1} - 'Fore.CYAN + 'Bot: {2} - 'Fore.YELLOW + 'Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
+                    print(Fore.BLUE + 'Responded Requests: {0} - Nuked Requests: {1} - Bot Requests: {2} - Elapsed Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
                     i.join()
 
         except KeyboardInterrupt:
@@ -686,14 +694,11 @@ if __name__ == '__main__':
                     i.join()
 
             logging.info(
-                        'Responded Requests: {0} - Nuked Requests: {1} - Bot Requests: {2} - Elapsed Time: {3} seconds.'.format(
-                            str(num_success),
-                            str(num_failed),
-                            str(num_bot_requests),
-                            round(elapsed_time)))
-                    print(Fore.BLUE + 'Successfully finished!')
-                    logging.info('Successfully finished!')
-                    sys.exit()
+                'Responded Requests: {0} - Nuked Requests: {1} - Bot Requests: {2} - Elapsed Time: {3} seconds.'.format(
+                    str(num_success),
+                    str(num_failed),
+                    str(num_bot_requests),
+                    round(elapsed_time)))
             print(Fore.BLUE + 'Successfully finished!')
             logging.info('Successfully finished!')
             break
