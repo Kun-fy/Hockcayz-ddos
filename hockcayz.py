@@ -671,7 +671,7 @@ if __name__ == '__main__':
                 t = threading.Thread(target=send_request)
                 t.start()
                 sleep(sleep_time)
-                elapsed_time = time.time() - start_tim
+                elapsed_time = time.time() - start_time
                 print(Fore.BLUE + 'Respon Requests: {0} - \033[32mNuked Requests: {1} - \033[37mBot Requests: {2} - \033[31mTime: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
             main_thread = threading.currentThread()
             for i in threading.enumerate():
