@@ -302,7 +302,7 @@ if __name__ == '__main__':
                         if i is main_thread:
                             continue
                         else:
-                            print(Fore.BLUE + 'Respon Requests: {0} - \033[38;5;206mNuked Requests: {1} - \033[31mBot Requests: {2} - \033[34mTime: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
+                            print(Fore.BLUE + 'Respon Requests: {0} - \033[38;5;206mNuked Requests: {1} - \033[38;5;52mBot Requests: {2} - \033[34mTime: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
                             i.join()
 
                 except KeyboardInterrupt:
@@ -673,13 +673,13 @@ if __name__ == '__main__':
                 t.start()
                 sleep(sleep_time)
                 elapsed_time = time.time() - start_time
-                print(Fore.BLUE + 'Respon Requests: {0} - \033[32mNuked Requests: {1} - \033[37mBot Requests: {2} - \033[31mTime: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
+                print(Fore.BLUE + 'Respon Requests: {0} - \033[38;5;220mNuked Requests: {1} - \033[37mBot Requests: {2} - \033[38;5;21mTime: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
             main_thread = threading.currentThread()
             for i in threading.enumerate():
                 if i is main_thread:
                     continue
                 else:
-                    print(Fore.BLUE + 'Respon Requests: {0} - \033[32mNuked Requests: {1} - \033[37mBot Requests: {2} - \033[32mTime: {3} seconds.'''''''.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
+                    print(Fore.BLUE + 'Respon Requests: {0} - \033[32mNuked Requests: {1} - \033[38;5;21Bot Requests: {2} - \033[38;5;220mTime: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
                     i.join()
 
         except KeyboardInterrupt:
