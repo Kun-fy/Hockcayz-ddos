@@ -295,14 +295,14 @@ if __name__ == '__main__':
                         t.start()
                         sleep(sleep_time)
                         elapsed_time = time.time() - start_time
-                        print(Fore.BLUE + 'Respon Requests: {0} - 'Fore.WHITE + 'Nuked Requests: {1} - 'Fore.CYAN + 'Bot Requests: {2} - 'Fore.YELLOW + 'Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
+                        print(Fore.BLUE + 'Respon Requests: {0} - 'Fore.WHITE + 'Nuked Requests: {1} - 'Fore.CYAN + 'Bot Requests: {2} - 'Fore.YELLOW + 'Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True'')
 
                     main_thread = threading.currentThread()
                     for i in threading.enumerate():
                         if i is main_thread:
                             continue
                         else:
-                            print(Fore.BLUE + 'Respon Requests: {0} - 'Fore.WHITE + 'Nuked Requests: {1} - 'Fore.CYAN + 'Bot Requests: {2} - 'Fore.YELLOW + 'Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
+                            print(Fore.BLUE + 'Respon Requests: {0} - 'Fore.WHITE + 'Nuked Requests: {1} - 'Fore.CYAN + 'Bot Requests: {2} - 'Fore.YELLOW + 'Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True'')
                             i.join()
 
                 except KeyboardInterrupt:
@@ -672,14 +672,14 @@ if __name__ == '__main__':
                 t.start()
                 sleep(sleep_time)
                 elapsed_time = time.time() - start_time
-                print(Fore.BLUE + 'Responded Requests: {0} - Nuked Requests: {1} - Bot Requests: {2} - Elapsed Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
+                print(Fore.BLUE + 'Responded Requests: {0} - Nuked Requests: {1} - Bot Requests: {2} - Elapsed Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True'')
 
             main_thread = threading.currentThread()
             for i in threading.enumerate():
                 if i is main_thread:
                     continue
                 else:
-                    print(Fore.BLUE + 'Respon Requests: {0} - 'Fore.WHITE + 'Nuked Requests: {1} - 'Fore.CYAN + 'Bot Requests: {2} - 'Fore.YELLOW + 'Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
+                    print(Fore.BLUE + 'Respon Requests: {0} - 'Fore.WHITE + 'Nuked Requests: {1} - 'Fore.CYAN + 'Bot Requests: {2} - 'Fore.YELLOW + 'Time: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True'')
                     i.join()
 
         except KeyboardInterrupt:
