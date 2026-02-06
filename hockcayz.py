@@ -515,7 +515,7 @@ if __name__ == '__main__':
             selected_to = float(
                 input(
                     Fore.GREEN +
-                    'Enter timeout second for requests: '))
+                    '╰─> Requests(second): '))
 
             if (not isinstance(selected_to, float)
                     or not (0 <= selected_to <= 30)):
@@ -555,14 +555,14 @@ if __name__ == '__main__':
         except BaseException:
             continue
 
-    logging.info('Number of threads: ' + str(num_threads))
+    logging.info('╰─> Num of threads: ' + str(num_threads))
 
     while (True):
         try:
             sleep_time = float(
                 input(
                     Fore.GREEN +
-                    'Enter seconds of sleeping between threads: '))
+                    '╰─> Sleeping between of threads(second): '))
 
             if (not isinstance(sleep_time, float)
                     or not (0 <= sleep_time <= 600)):
@@ -589,13 +589,13 @@ if __name__ == '__main__':
             num_retries = int(
                 input(
                     Fore.GREEN +
-                    'Enter number of retries after a connection failure: '))
+                    '╰─> Number of retries after a connection failure: '))
 
             if (not isinstance(num_retries, int)
                     or not (0 <= num_retries <= 128)):
                 print(
                     Fore.RED +
-                    'Enter valid number of retries between 0 and 128!')
+                    '╰─> Valid number of retries between 0 and 128!')
                 continue
 
             else:
