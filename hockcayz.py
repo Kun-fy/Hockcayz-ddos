@@ -316,12 +316,12 @@ if __name__ == '__main__':
                             i.join()
 
                     logging.info(
-                        'Responded Requests: {0} - Nuked Requests: {1} - Bot Requests: {2} - Elapsed Time: {3} seconds.'.format(
+                        'Respon Req:{0} - Nuk Req: {1} - Bot Req: {2} - Time: {3} seconds.'.format(
                             str(num_success),
                             str(num_failed),
                             str(num_bot_requests),
                             round(elapsed_time)))
-                    print(Fore.BLUE + 'Successfully finished!')
+                    print(Fore.BLUE + Fore.YELLOW + Fore.WHITE +'Successfully finished!')
                     logging.info('Successfully finished!')
                     sys.exit()
 
