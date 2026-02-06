@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import argparse
 import logging
 import json
@@ -162,7 +161,7 @@ def send_request():
 def arg_parsing():
 
     parser = argparse.ArgumentParser(
-        description='PyDDoZ Argument Parser v1.0.0')
+        description='Hokcayz Argument Parser v1.0.0')
     parser.add_argument('-u', help='URL', required=True, type=str)
     parser.add_argument(
         '-m',
@@ -227,7 +226,7 @@ if __name__ == '__main__':
     urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
     resource.setrlimit(resource.RLIMIT_NOFILE, (999999, 999999))
     logging.basicConfig(
-        filename='pyddoz.log',
+        filename='hokcayz.log',
         format='%(asctime)s | %(levelname)s | %(message)s',
         datefmt='%m/%d/%Y %I:%M:%S %p',
         filemode='w',
