@@ -336,7 +336,8 @@ if __name__ == '__main__':
 
     while (True):
         try:
-            selected_urls = str(input(Fore.GREEN + 'Enter URL(s): '))
+            print(Fore.GREEN + '╭────────────⬣⬣*')
+            selected_urls = str(input(Fore.GREEN + '╰─> Enter URL(s): '))
 
             if (not isinstance(selected_urls, str)):
                 print(Fore.RED + 'Enter valid URL(s)!')
@@ -361,7 +362,7 @@ if __name__ == '__main__':
             selected_method = str(
                 input(
                     Fore.GREEN +
-                    'Enter request method GET, POST, PUT, HEAD, OPTIONS, DELETE? [G/P/U/H/O/D]: ')[0].lower())
+                    '╰─> method GET, POST, PUT, HEAD, OPTIONS, DELETE? [G/P/U/H/O/D]: ')[0].lower())
 
             if (selected_method not in 'gpuhod'):
                 print(Fore.RED + 'Enter G, P, U, H, O, or D!')
