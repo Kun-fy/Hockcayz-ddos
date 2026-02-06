@@ -5,7 +5,8 @@ import time
 import socket
 from time import sleep
 from threading import Thread, active_count
-from os import system, asyncio
+import tqdm as tdm # Alias the module name
+from tqdm import tqdm # Import the function
 import random
 import string
 import signal
@@ -84,8 +85,8 @@ except:
     sys.exit()
 
 
-# Check if script is running 
-if asyncio() != 0:
+tdm # This is the module object
+tqdm(...) # This calls the function
     print("Run %s asyn." % sys.argv[0])
     sys.exit()
 
