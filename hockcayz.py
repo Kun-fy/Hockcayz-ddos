@@ -5,7 +5,7 @@ import time
 import socket
 from time import sleep
 from threading import Thread, active_count
-from os import system, id -u
+from os import system, asyncio
 import random
 import string
 import signal
@@ -85,8 +85,8 @@ except:
 
 
 # Check if script is running 
-if id -u() != 0:
-    print("Run %s as root." % sys.argv[0])
+if asyncio() != 0:
+    print("Run %s asyn." % sys.argv[0])
     sys.exit()
 
 
