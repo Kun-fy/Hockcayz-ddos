@@ -225,7 +225,6 @@ def arg_parsing():
 
 if __name__ == '__main__':
     urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-    resource.setrlimit(resource.RLIMIT_NOFILE, (999999, 999999))
     logging.basicConfig(
         filename='hokcayz.log',
         format='%(asctime)s | %(levelname)s | %(message)s',
