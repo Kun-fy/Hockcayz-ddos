@@ -33,7 +33,7 @@ def show_banner():
 print(f"{Fore.BLUE}╔{'═' * 70}╗")
 print(f"{Fore.BLUE}║\033[38;5;220m Don't fall in love with this device{' ' * 33}\033[32m║")
 print(f"{Fore.BLUE}║\033[38;5;220m because this calm one is always working while you sleep{' ' * 13}\033[32m║")
-print(f"{Fore.BLUE}╚{═  * 70}╝")
+print(f"{Fore.BLUE}╚{'═'  * 70}╝")
 
 
 
