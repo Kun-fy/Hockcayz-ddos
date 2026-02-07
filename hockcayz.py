@@ -384,7 +384,7 @@ if __name__ == '__main__':
     if (selected_method == 'p' or selected_method == 'u'):
         payload = {}
         key_turn = True
-        raw_post = str(input(Fore.GREEN + 'Enter post data: '))
+        raw_post = str(input(Fore.GREEN + '╰─> Enter post data: '))
 
         try:
             if ('&' in raw_post):
@@ -490,11 +490,11 @@ if __name__ == '__main__':
             try:
                 only_bots = str(
                     input(
-                        Fore.RED +
+                        Fore.BLUE +
                         'Only bots? [Y/N]: ')[0].lower())
 
                 if (only_bots not in 'yn'):
-                    print(Fore.RED + '╰─> Enter Y or N!')
+                    print(Fore.GREEN + '╰─> Enter Y or N!')
                     continue
 
                 else:
@@ -521,7 +521,7 @@ if __name__ == '__main__':
 
             if (not isinstance(selected_to, float)
                     or not (0 <= selected_to <= 30)):
-                print(Fore.RED + '╰─> Enter valid second(s) between 0 and 30!')
+                print(Fore.GREEN + '╰─> Enter valid second(s) between 0 and 30!')
                 continue
 
             else:
@@ -543,7 +543,7 @@ if __name__ == '__main__':
             if (not isinstance(num_threads, int)
                     or not (1 <= num_threads <= 1024)):
                 print(
-                    Fore.RED +
+                    Fore.GREEN +
                     '╰─> Enter valid number of threads between 1 and 1024!')
                 continue
 
