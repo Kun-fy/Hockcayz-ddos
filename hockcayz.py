@@ -303,7 +303,7 @@ if __name__ == '__main__':
                         if i is main_thread:
                             continue
                         else:
-                            print(Fore.BLUE + 'Respon Req: {0} | \033[38;5;206mNuked Req: {1} | \033[38;5;52mBot Requests: {2} | \033[34mTime: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
+                            print(Fore.BLUE + 'Respon Req: {0} | \033[38;5;206mNuked Req: {1} | \033[38;5;52mBot Requests: {2} | \033[38;5;154mTime: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
                             i.join()
 
                 except KeyboardInterrupt:
