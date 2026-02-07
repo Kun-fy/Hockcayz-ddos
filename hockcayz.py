@@ -29,8 +29,13 @@ def show_banner():
 ││   │││╰───╯╰╯ │ ││╰───/│╰──│╯╰│──╯│╰─│───╮ ╭─╮ ╭─╮ ╭─╮
 ╰╯   ╰╯╰───╯    ╰─╯╰────╯╰───╯  ╰───╮  ╰───╯ ╰─╯ ╰─╯ ╰─╯
                                ╰│──╯│
-                                ╰───╯''')
-
+                                ╰───╯
+╭───────────────────────────────╮
+│\033[38;5;52m   Don't fall in love with this device \033[33m│
+│\033[38;5;52m   because this calm one is always working while you sleep \033[33m│
+│\033[38;5;52m.                     ⬣ Hokcailah...! ⬣ \033[33m│
+╰───────────────────────────────╯
+''')
 def send_request():
     try:
         global num_success
@@ -282,12 +287,8 @@ if __name__ == '__main__':
             selected_redir = arguments.rd
 
             start_time = time.time()
-            print(f"{Fore.BLUE}╔{'═' * 55}╗")
-            print(f"{Fore.BLUE}║\033[38;5;220m Don't fall in love with this device{' ' * 20}{Fore.BLUE}║")
-            print(f"{Fore.BLUE}║\033[38;5;220m because this calm one is always working while you sleep{' ' * 1}{Fore.BLUE}║")
-            print(f"{Fore.BLUE}╚{'═'  * 55}╝")
             print(Fore.BLUE + '\rProgram was started successfully!')
-            print(Fore.RED + 'Attack is started! Press [CTRL + C] to stop.')
+            print(Fore.GREEN + 'Attack is started! Press [CTRL + C] to stop.')
             logging.info('Attack started!')
 
             while (True):
