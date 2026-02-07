@@ -30,9 +30,9 @@ def show_banner():
 ╰╯   ╰╯╰───╯    ╰─╯╰────╯╰───╯  ╰───╮  ╰───╯ ╰─╯ ╰─╯ ╰─╯
                                ╰│──╯│
                                 ╰───╯
-        Dont fall in love with this device 
+Dont fall in love with this device 
 because this calm one is always working while you sleep                    
-                ⬣ Hokcailah...! ⬣ 
+Hokcailah...!
 
 ''')
 def send_request():
