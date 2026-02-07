@@ -674,7 +674,7 @@ if __name__ == '__main__':
                 t.start()
                 sleep(sleep_time)
                 elapsed_time = time.time() - start_time
-                print(Fore.BLUE + 'Respon Req: {0} | \033[38;5;220mNuked Req: {1} | \033[37mBot Requests: {2} | \033[38;5;21mTime: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
+                print(Fore.BLUE + 'Respon Req: {0} | \033[38;5;220mNuked Req: {1} | \033[37mBot Requests: {2} | \033[38;5;206mTime: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
             main_thread = threading.currentThread()
             for i in threading.enumerate():
                 if i is main_thread:
