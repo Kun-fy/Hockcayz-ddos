@@ -30,12 +30,6 @@ def show_banner():
 ╰╯   ╰╯╰───╯    ╰─╯╰────╯╰───╯  ╰───╮  ╰───╯ ╰─╯ ╰─╯ ╰─╯
                                ╰│──╯│
                                 ╰───╯''')
-print(f"{Fore.BLUE}╔{'═' * 70}╗")
-print(f"{Fore.BLUE}║\033[38;5;220m Don't fall in love with this device{' ' * 33}\033[32m║")
-print(f"{Fore.BLUE}║\033[38;5;220m because this calm one is always working while you sleep{' ' * 13}\033[32m║")
-print(f"{Fore.BLUE}╚{'═'  * 70}╝")
-
-
 
 def send_request():
     try:
@@ -288,6 +282,10 @@ if __name__ == '__main__':
             selected_redir = arguments.rd
 
             start_time = time.time()
+            print(f"{Fore.BLUE}╔{'═' * 55}╗")
+            print(f"{Fore.BLUE}║\033[38;5;220m Don't fall in love with this device{' ' * 20}{Fore.BLUE}║")
+            print(f"{Fore.BLUE}║\033[38;5;220m because this calm one is always working while you sleep{' ' * 1}{Fore.BLUE}║")
+            print(f"{Fore.BLUE}╚{'═'  * 55}╝")
             print(Fore.BLUE + '\rProgram was started successfully!')
             print(Fore.RED + 'Attack is started! Press [CTRL + C] to stop.')
             logging.info('Attack started!')
