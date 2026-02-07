@@ -31,7 +31,7 @@ def show_banner():
                                ╰│──╯│
                                 ╰───╯''')
 print(Fore.YELLOW +'╭───────────────────────────────╮')
-print(Fore.YELLOW +'│\033[38;5;52m   Don't fall in love with this device \033[33m│''')
+print(Fore.YELLOW +'│\033[38;5;52m   Dont fall in love with this device \033[33m│')
 print(Fore.YELLOW +'│\033[38;5;52m   because this calm one is always working while you sleep \033[33m│')
 print(Fore.YELLOW +'│\033[38;5;52m.                     ⬣ Hokcailah...! ⬣ \033[33m│')
 print(Fore.YELLOW +'╰───────────────────────────────╯')
