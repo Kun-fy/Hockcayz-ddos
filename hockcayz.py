@@ -30,11 +30,10 @@ def show_banner():
 ╰╯   ╰╯╰───╯    ╰─╯╰────╯╰───╯  ╰───╮  ╰───╯ ╰─╯ ╰─╯ ╰─╯
                                ╰│──╯│
                                 ╰───╯
-╭───────────────────────────────╮
-│\033[37m  Dont fall in love with this device \033[33m│
-│\033[37m  because this calm one is always working while you sleep \033[33m│
-│\033[37m                     ⬣ Hokcailah...! ⬣ \033[33m│
-╰───────────────────────────────╯
+                   Dont fall in love with this device 
+       because this calm one is always working while you sleep                    
+                            ⬣ Hokcailah...! ⬣ 
+
 ''')
 def send_request():
     try:
