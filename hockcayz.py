@@ -29,13 +29,13 @@ def show_banner():
 ││   │││╰───╯╰╯ │ ││╰───/│╰──│╯╰│──╯│╰─│───╮ ╭─╮ ╭─╮ ╭─╮
 ╰╯   ╰╯╰───╯    ╰─╯╰────╯╰───╯  ╰───╮  ╰───╯ ╰─╯ ╰─╯ ╰─╯
                                ╰│──╯│
-                                ╰───╯
-╭───────────────────────────────╮
-│'\033[38;5;52m   Don't fall in love with this device \033[33m'│
-│'\033[38;5;52m   because this calm one is always working while you sleep \033[33m'│
-│'\033[38;5;52m.                     ⬣ Hokcailah...! ⬣ \033[33m'│
-╰───────────────────────────────╯
-''')
+                                ╰───╯''')
+print(Fore.YELLOW +'╭───────────────────────────────╮')
+print(Fore.YELLOW +'│\033[38;5;52m   Don't fall in love with this device \033[33m│''')
+print(Fore.YELLOW +'│\033[38;5;52m   because this calm one is always working while you sleep \033[33m│')
+print(Fore.YELLOW +'│\033[38;5;52m.                     ⬣ Hokcailah...! ⬣ \033[33m│')
+print(Fore.YELLOW +'╰───────────────────────────────╯')
+
 def send_request():
     try:
         global num_success
