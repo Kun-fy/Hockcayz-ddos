@@ -296,14 +296,14 @@ if __name__ == '__main__':
                         t.start()
                         sleep(sleep_time)
                         elapsed_time = time.time() - start_time
-                        print(Fore.YELLOW + 'Respon Req: {0} | \033[32m Nuked Req: {1} | \033[38;5;111mBot Requests: {2} | \033[38;5;206mTime: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
+                        print(Fore.YELLOW + 'Respon Req: {0} | \033[32m Nuked Req: {1} | \033[38;5;111mBot Requests: {2} | \033[38;5;39mTime: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
 
                     main_thread = threading.currentThread()
                     for i in threading.enumerate():
                         if i is main_thread:
                             continue
                         else:
-                            print(Fore.BLUE + 'Respon Req: {0} | \033[38;5;206mNuked Req: {1} | \033[38;5;52mBot Requests: {2} | \033[38;5;154mTime: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
+                            print(Fore.BLUE + 'Respon Req: {0} | \033[38;5;206mNuked Req: {1} | \033[38;5;52mBot Requests: {2} | \033[38;5;220mTime: {3} seconds.'.format(str(num_success), str(num_failed), str(num_bot_requests), round(elapsed_time)), end='\r', flush=True)
                             i.join()
 
                 except KeyboardInterrupt:
