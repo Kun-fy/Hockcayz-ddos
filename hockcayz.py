@@ -323,7 +323,7 @@ if __name__ == '__main__':
                             str(num_failed),
                             str(num_bot_requests),
                             round(elapsed_time)))
-                    print(Fore.BLUE + 'Successfully finished!')
+                    print(Fore.GREEN + 'Successfully finished!')
                     logging.info('Successfully finished!')
                     sys.exit()
 
@@ -340,14 +340,14 @@ if __name__ == '__main__':
             selected_urls = str(input(Fore.GREEN + '╰─> Enter URL(s): '))
 
             if (not isinstance(selected_urls, str)):
-                print(Fore.RED + 'Enter valid URL(s)!')
+                print(Fore.RED + '╰─> Enter valid URL(s)!')
                 continue
 
             else:
                 break
 
         except KeyboardInterrupt:
-            logging.critical('Interrupt by keyboard before the attack!')
+            logging.critical('╰─> Interrupt by keyboard before the attack!')
             sys.exit()
 
         except BaseException:
@@ -365,20 +365,20 @@ if __name__ == '__main__':
                     '╰─> method GET, POST, PUT, HEAD, OPTIONS, DELETE? [G/P/U/H/O/D]: ')[0].lower())
 
             if (selected_method not in 'gpuhod'):
-                print(Fore.RED + 'Enter G, P, U, H, O, or D!')
+                print(Fore.RED + '╰─> Enter G, P, U, H, O, or D!')
                 continue
 
             else:
                 break
 
         except KeyboardInterrupt:
-            logging.critical('Interrupt by keyboard before the attack!')
+            logging.critical('╰─> Interrupt by keyboard before the attack!')
             sys.exit()
 
         except BaseException:
             continue
 
-    logging.info('HTTP request method: ' + selected_method.upper())
+    logging.info('╰─> HTTP request method: ' + selected_method.upper())
 
     if (selected_method == 'p' or selected_method == 'u'):
         payload = {}
@@ -399,7 +399,7 @@ if __name__ == '__main__':
             else:
                 payload[raw_post.split('=')[0]] = raw_post.split('=')[1]
 
-            logging.info('POST or PUT data: ' + str(payload))
+            logging.info('╰─> POST or PUT data: ' + str(payload))
 
         except BaseException as payload_error:
             payload = 'LEL!'
@@ -414,23 +414,23 @@ if __name__ == '__main__':
                 randomize_data = str(
                     input(
                         Fore.GREEN +
-                        'Do you want to randomize post data? [Y/N]: ')[0].lower())
+                        '╰─> Do you want to randomize post data? [Y/N]: ')[0].lower())
 
                 if (randomize_data not in 'yn'):
-                    print(Fore.RED + 'Enter Y or N!')
+                    print(Fore.WHITE + '╰─> Enter Y or N!')
                     continue
 
                 else:
                     break
 
             except KeyboardInterrupt:
-                logging.critical('Interrupt by keyboard before the attack!')
+                logging.critical('╰─> Interrupt by keyboard before the attack!')
                 sys.exit()
 
             except BaseException:
                 continue
 
-        logging.info('Randomize data: ' + randomize_data.upper())
+        logging.info('╰─> Randomize data: ' + randomize_data.upper())
 
         if (randomize_data == 'y'):
             while (True):
@@ -438,12 +438,12 @@ if __name__ == '__main__':
                     max_random = int(
                         input(
                             Fore.GREEN +
-                            'Enter maximum length of random alphanumeric strings to create: '))
+                            '╰─> Maximum length of random alphanumeric strings to create: '))
 
                     if (not isinstance(max_random, int)
                             or not (5 <= max_random <= 1048576)):
                         print(
-                            Fore.RED + 'Enter valid number between 5 and 1048576!')
+                            Fore.RED + '╰─> Valid number between 5 and 1048576!')
                         continue
 
                     else:
@@ -451,7 +451,7 @@ if __name__ == '__main__':
 
                 except KeyboardInterrupt:
                     logging.critical(
-                        'Interrupt by keyboard before the attack!')
+                        '╰─> Interrupt by keyboard before the attack!')
                     sys.exit()
 
                 except BaseException:
@@ -469,7 +469,7 @@ if __name__ == '__main__':
                     'Do you want to activate bots? [Y/N]: ')[0].lower())
 
             if (activate_bots not in 'yn'):
-                print(Fore.RED + 'Enter Y or N!')
+                print(Fore.WHITE + '╰─> Enter Y or N!')
                 continue
 
             else:
@@ -493,7 +493,7 @@ if __name__ == '__main__':
                         'Only bots? [Y/N]: ')[0].lower())
 
                 if (only_bots not in 'yn'):
-                    print(Fore.RED + 'Enter Y or N!')
+                    print(Fore.RED + '╰─> Enter Y or N!')
                     continue
 
                 else:
@@ -520,7 +520,7 @@ if __name__ == '__main__':
 
             if (not isinstance(selected_to, float)
                     or not (0 <= selected_to <= 30)):
-                print(Fore.RED + 'Enter valid second(s) between 0 and 30!')
+                print(Fore.RED + '╰─> Enter valid second(s) between 0 and 30!')
                 continue
 
             else:
@@ -567,7 +567,7 @@ if __name__ == '__main__':
 
             if (not isinstance(sleep_time, float)
                     or not (0 <= sleep_time <= 600)):
-                print(Fore.RED + 'Enter valid seconds between 0 and 600!')
+                print(Fore.RED + '╰─> Valid seconds between 0 and 600!')
                 continue
 
             else:
@@ -619,7 +619,7 @@ if __name__ == '__main__':
                     'Do you want to use proxy? [Y/N]: ')[0].lower())
 
             if (use_proxy not in 'yn'):
-                print(Fore.BLUE + 'Enter Y or N!')
+                print(Fore.BLUE + '╰─> Enter Y or N!')
                 continue
 
             else:
@@ -642,7 +642,7 @@ if __name__ == '__main__':
                     'Do you want to allow redirections? [Y/N]: ')[0].lower())
 
             if (selected_redir not in 'yn'):
-                print(Fore.RED + 'Enter Y or N!')
+                print(Fore.YELLOW + '╰─> Enter Y or N!')
                 continue
 
             else:
@@ -663,7 +663,7 @@ if __name__ == '__main__':
         selected_redir = False
 
     start_time = time.time()
-    print(Fore.RED + 'Attack is started! Press [CTRL + C] to stop.')
+    print(Fore.BLUE + 'Attack is started! Press [CTRL + C] to stop.')
     logging.info('Attack started!')
 
     while (True):
