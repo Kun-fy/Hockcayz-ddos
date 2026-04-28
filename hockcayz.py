@@ -236,7 +236,7 @@ if __name__ == '__main__':
         level=logging.DEBUG)
     log = logging.getLogger()
     handler = RotatingFileHandler(
-        'pyddoz.log',
+        'hokcayz.log',
         maxBytes=10 * 1024 * 1024,
         backupCount=3)
     log.addHandler(handler)
